@@ -20,13 +20,6 @@ Flight::register('view', 'Smarty', array(), function($smarty){
 /*
 Flight::route('GET /', array('Controller_Index','index'));
 Flight::route('GET /error/404', array('Controller_Error','error_404'));
-
-Flight::route('GET /estado_usuario/listar', array('Controller_Estado_Usuario','listar'));
-Flight::route('GET /item/listar/menu', array('Controller_Item','menu'));
-Flight::route('GET /item/listar_todos', array('Controller_Item','listar_todos'));
-Flight::route('GET /item/listar/@subtitulo_id', array('Controller_Item','listar'));
-Flight::route('POST /item/guardar', array('Controller_Item','guardar'));
-
 Flight::map('notFound', function(){
 	Flight::redirect('/error/404');
 });
@@ -34,6 +27,9 @@ Flight::map('notFound', function(){
 
 Flight::route('GET /empresa/@id', array('Controller_Empresa','obtener'));
 Flight::route('POST /empresa/guardar', array('Controller_Empresa','guardar'));
+
+Flight::route('GET /sede/listar/@id', array('Controller_Sede','listar'));
+Flight::route('POST /sede/guardar', array('Controller_Sede','guardar'));
 
 Flight::start();
 

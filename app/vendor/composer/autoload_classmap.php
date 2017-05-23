@@ -12,6 +12,7 @@ return array(
     'Controller_Empresa' => $baseDir . '/app/controllers/empresa.php',
     'Controller_Error' => $baseDir . '/app/controllers/error.php',
     'Controller_Index' => $baseDir . '/app/controllers/index.php',
+    'Controller_Sede' => $baseDir . '/app/controllers/sede.php',
     'Database' => $baseDir . '/app/config/database.php',
     'IdiormMethodMissingException' => $vendorDir . '/j4mie/idiorm/idiorm.php',
     'IdiormResultSet' => $vendorDir . '/j4mie/idiorm/idiorm.php',

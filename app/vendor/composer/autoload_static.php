@@ -19,6 +19,7 @@ class ComposerStaticInitceac49b83e66207e5b2ff31dd4059e77
         'Controller_Empresa' => __DIR__ . '/../../..' . '/app/controllers/empresa.php',
         'Controller_Error' => __DIR__ . '/../../..' . '/app/controllers/error.php',
         'Controller_Index' => __DIR__ . '/../../..' . '/app/controllers/index.php',
+        'Controller_Sede' => __DIR__ . '/../../..' . '/app/controllers/sede.php',
         'Database' => __DIR__ . '/../../..' . '/app/config/database.php',
         'IdiormMethodMissingException' => __DIR__ . '/..' . '/j4mie/idiorm/idiorm.php',
         'IdiormResultSet' => __DIR__ . '/..' . '/j4mie/idiorm/idiorm.php',
