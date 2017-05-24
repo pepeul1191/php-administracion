@@ -42,6 +42,17 @@ class Controller_Proveedor extends Controller
           $proveedores = Controller::load_model('proveedores');
           $proveedores->editar($id, $razon_social, $ruc, $direccion, $distrito_id);
       }
+
+      public static function obtener($id)
+      {
+          $proveedores = Controller::load_model('proveedores');
+          $rs = $proveedores->obtener($id);
+          if (empty($rs)) {
+              echo '';
+          }else{
+              echo json_encode($rs[0]);
+          }
+      }
 }
 
 ?>

@@ -9,7 +9,7 @@ class Proveedores extends Database
 
     public function listar()
     {
-      return ORM::for_table('proveedores')->select('id')->select('razon_social')->select('ruc')->find_array();
+      return ORM::for_table('proveedores')->select('id')->select('razon_social')->select('ruc')->select('direccion')->select('distrito_id')->find_array();
     }
 
     public function crear($razon_social, $ruc, $direccion, $distrito_id)
@@ -32,6 +32,11 @@ class Proveedores extends Database
       $proveedores->set('direccion', $direccion);
       $proveedores->set('distrito_id', $distrito_id);
       $proveedores->save();
+    }
+
+    public function obtener($id)
+    {
+      return ORM::for_table('proveedores')->select('id')->select('razon_social')->select('ruc')->select('direccion')->select('distrito_id')->where('id', $id)->find_array();
     }
 }
 
