@@ -34,6 +34,9 @@ Flight::route('POST /sede/guardar', array('Controller_Sede','guardar'));
 Flight::route('GET /tipos_almacen/listar', array('Controller_Tipos_Almacen','listar'));
 Flight::route('POST /tipos_almacen/guardar', array('Controller_Tipos_Almacen','guardar'));
 
+Flight::route('GET /proveedor/listar', array('Controller_Proveedor','listar'));
+Flight::route('POST /proveedor/guardar', array('Controller_Proveedor','guardar'));
+
 Flight::start();
 
 ?>

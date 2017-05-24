@@ -14,7 +14,7 @@ class Controller_Sede extends Controller
         try {
           if(count($nuevos) > 0){
             foreach ($nuevos as &$nuevo) {
-                $id_generado = self::crear($nuevo->{'nombre'}, $nuevo->{'distrito_id'}, $empresa_id);
+                $id_generado = self::crear($nuevo->{'nombre'}, $nuevo->{'distrito_id'}, $nuevo->{'direccion'}, $empresa_id);
                 $temp = [];
                 $temp['temporal'] = $nuevo->{'id'};
                     $temp['nuevo_id'] = $id_generado;
@@ -23,7 +23,7 @@ class Controller_Sede extends Controller
           }
           if(count($editados) > 0){
             foreach ($editados as &$editado) {
-              self::editar($editado->{'id'}, $editado->{'nombre'}, $editado->{'distrito_id'});
+              self::editar($editado->{'id'}, $editado->{'nombre'}, $editado->{'distrito_id'}, $editado->{'direccion'});
             }
           }
           if(count($eliminados) > 0){
@@ -41,16 +41,16 @@ class Controller_Sede extends Controller
         echo json_encode($rpta);
       }
 
-      public static function crear($nombre, $distrito_id, $empresa_id)
+      public static function crear($nombre, $distrito_id, $direccion, $empresa_id)
       {
           $sedes = Controller::load_model('sedes');
-          return $sedes->crear($nombre, $distrito_id, $empresa_id);
+          return $sedes->crear($nombre, $distrito_id, $direccion, $empresa_id);
       }
 
-      public static function editar($id, $nombre, $distrito_id)
+      public static function editar($id, $nombre, $distrito_id, $direccion)
       {
           $sedes = Controller::load_model('sedes');
-          $sedes->editar($id, $nombre, $distrito_id);
+          $sedes->editar($id, $nombre, $distrito_id, $direccion);
       }
 
       public static function eliminar($id)

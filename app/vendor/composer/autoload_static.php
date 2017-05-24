@@ -15,10 +15,12 @@ class ComposerStaticInitceac49b83e66207e5b2ff31dd4059e77
     public static $classMap = array (
         'Configuration' => __DIR__ . '/../../..' . '/app/config/configuration.php',
         'Controller' => __DIR__ . '/../../..' . '/app/config/controller.php',
+        'Controller_Almacen' => __DIR__ . '/../../..' . '/app/controllers/almacen.php',
         'Controller_Demo' => __DIR__ . '/../../..' . '/app/controllers/demo.php',
         'Controller_Empresa' => __DIR__ . '/../../..' . '/app/controllers/empresa.php',
         'Controller_Error' => __DIR__ . '/../../..' . '/app/controllers/error.php',
         'Controller_Index' => __DIR__ . '/../../..' . '/app/controllers/index.php',
+        'Controller_Proveedor' => __DIR__ . '/../../..' . '/app/controllers/proveedor.php',
         'Controller_Sede' => __DIR__ . '/../../..' . '/app/controllers/sede.php',
         'Controller_Tipos_Almacen' => __DIR__ . '/../../..' . '/app/controllers/tipos_almacen.php',
         'Database' => __DIR__ . '/../../..' . '/app/config/database.php',

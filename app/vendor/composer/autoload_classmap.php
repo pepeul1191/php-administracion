@@ -8,10 +8,12 @@ $baseDir = dirname(dirname($vendorDir));
 return array(
     'Configuration' => $baseDir . '/app/config/configuration.php',
     'Controller' => $baseDir . '/app/config/controller.php',
+    'Controller_Almacen' => $baseDir . '/app/controllers/almacen.php',
     'Controller_Demo' => $baseDir . '/app/controllers/demo.php',
     'Controller_Empresa' => $baseDir . '/app/controllers/empresa.php',
     'Controller_Error' => $baseDir . '/app/controllers/error.php',
     'Controller_Index' => $baseDir . '/app/controllers/index.php',
+    'Controller_Proveedor' => $baseDir . '/app/controllers/proveedor.php',
     'Controller_Sede' => $baseDir . '/app/controllers/sede.php',
     'Controller_Tipos_Almacen' => $baseDir . '/app/controllers/tipos_almacen.php',
     'Database' => $baseDir . '/app/config/database.php',
