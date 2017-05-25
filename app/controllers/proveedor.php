@@ -15,10 +15,10 @@ class Controller_Proveedor extends Controller
 
           try {
             if($data->{'id'} == 'E'){
-                $id_generado = self::crear($data->{'razon_social'}, $data->{'ruc'}, $data->{'direccion'}, $data->{'distrito_id'});
+                $id_generado = self::crear($data->{'razon_social'}, $data->{'ruc'}, $data->{'direccion'}, $data->{'distrito_id'}, $data->{'imagen_dni_id'}, $data->{'imagen_ruc_id'});
                 $rpta['mensaje'] = ['Se ha creado un nuevo proveedor', $id_generado];
             }else{
-                self::editar($data->{'id'}, $data->{'razon_social'}, $data->{'ruc'}, $data->{'direccion'}, $data->{'distrito_id'});
+                self::editar($data->{'id'}, $data->{'razon_social'}, $data->{'ruc'}, $data->{'direccion'}, $data->{'distrito_id'}, $data->{'imagen_dni_id'}, $data->{'imagen_ruc_id'});
                 $rpta['mensaje'] = ['Los datos del proveedor se han actualizado'];
             }
             $rpta['tipo_mensaje'] = 'success';
@@ -31,16 +31,16 @@ class Controller_Proveedor extends Controller
           echo json_encode($rpta);
       }
 
-      public static function crear($razon_social, $ruc, $direccion, $distrito_id)
+      public static function crear($razon_social, $ruc, $direccion, $distrito_id, $imagen_dni_id, $imagen_ruc_id)
       {
           $proveedores = Controller::load_model('proveedores');
-          return $proveedores->crear($razon_social, $ruc, $direccion, $distrito_id);
+          return $proveedores->crear($razon_social, $ruc, $direccion, $distrito_id, $imagen_dni_id, $imagen_ruc_id);
       }
 
-      public static function editar($id, $razon_social, $ruc, $direccion, $distrito_id)
+      public static function editar($id, $razon_social, $ruc, $direccion, $distrito_id, $imagen_dni_id, $imagen_ruc_id)
       {
           $proveedores = Controller::load_model('proveedores');
-          $proveedores->editar($id, $razon_social, $ruc, $direccion, $distrito_id);
+          $proveedores->editar($id, $razon_social, $ruc, $direccion, $distrito_id, $imagen_dni_id, $imagen_ruc_id);
       }
 
       public static function obtener($id)
