@@ -53,6 +53,12 @@ class Controller_Proveedor extends Controller
               echo json_encode($rs[0]);
           }
       }
+
+      public static function archivos_ids()
+      {
+          $proveedores = Controller::load_model('proveedores');
+          echo json_encode($proveedores->archivos_ids());
+      }
 }
 
 ?>

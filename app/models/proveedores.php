@@ -42,6 +42,11 @@ class Proveedores extends Database
     {
       return ORM::for_table('proveedores')->select('id')->select('razon_social')->select('ruc')->select('direccion')->select('distrito_id')->select('distrito_id')->select('imagen_dni_id')->select('imagen_ruc_id')->where('id', $id)->find_array();
     }
+
+    public function archivos_ids()
+    {
+       return ORM::for_table('vw_ids_archivos_proveedores')->find_array();
+    }
 }
 
 ?>
